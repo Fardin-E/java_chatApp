@@ -1,0 +1,7 @@
+chatApp\Server\DatabaseConnector.class
+chatApp\Server\Server$Handler.class
+chatApp\Server\Server$1.class
+chatApp\Server\Server.class
+chatApp\Server\UserManager$AuthResult.class
+chatApp\Client\Client.class
+chatApp\Server\UserManager.class
