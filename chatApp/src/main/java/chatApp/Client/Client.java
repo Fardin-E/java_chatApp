@@ -121,8 +121,8 @@ public class Client {
 
             out.println("AUTHENTICATE:" + clientName + ":" + password);
             String response = reader.readLine(); // Wait for a response from the server after authentication
-            if ("AUTH_FAILED".equals(response)) {
-                JOptionPane.showMessageDialog(frame, "Authentication failed!", "Error", JOptionPane.ERROR_MESSAGE);
+            if (response != null && response.startsWith("AUTH_FAILED")) {
+                JOptionPane.showMessageDialog(frame, response, "Error", JOptionPane.ERROR_MESSAGE);
                 frame.dispose();  // Close the client UI
                 return;  // End this method
             }
