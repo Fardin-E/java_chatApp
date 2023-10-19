@@ -10,7 +10,11 @@ public class UserManager {
     private Connection connection;
 
     public UserManager() throws SQLException {
-        DatabaseConnector dbConnector = new DatabaseConnector();
+        this(false);
+    }
+
+    public UserManager(boolean isTestMode) throws SQLException {
+        DatabaseConnector dbConnector = new DatabaseConnector(isTestMode);
         connection = dbConnector.getConnection();
     }
 
